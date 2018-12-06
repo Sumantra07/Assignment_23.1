@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+
+import User from './User';
 
 class App extends Component {
   render() {
+    // create the userList
+    let userList = [
+      { name: "Suresh", Age: '20' },
+      { name: "Ramesh", Age: '22' },
+      { name: "Naresh", Age: '24' },
+      { name: "Madesh", Age: '30' }
+    ];
     return (
+      // passing userList to functional component      
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <User userList = {userList}/>
       </div>
     );
   }
